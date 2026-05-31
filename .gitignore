@@ -1,0 +1,12 @@
+# Never commit real secrets
+*.key
+munge.key
+secrets/
+
+# Local log artifacts
+*.log
+
+# OS / editor cruft
+.DS_Store
+*.swp
+*~

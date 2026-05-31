@@ -1,0 +1,8 @@
+# --- Power save (suspend idle nodes / resume on demand) ---
+# Add these to /etc/slurm/slurm.conf on BOTH nodes
+SuspendProgram=/etc/slurm/suspend.sh
+ResumeProgram=/etc/slurm/resume.sh
+SuspendTimeout=60               # max wait for SuspendProgram to complete
+ResumeTimeout=600               # max wait for resumed node to register
+SuspendTime=60                  # idle time before a node qualifies (60 testing, 300+ prod)
+SuspendExcNodes=cloud-native-stack-vm1   # NEVER suspend the controller
